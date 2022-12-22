@@ -2,8 +2,8 @@ package de.tum.in.ase;
 
 public class Monster {
 
-    protected int posX;
-    protected int posY;
+    private int posX;
+    private int posY;
 
     public Monster(int posX, int posY) {
 

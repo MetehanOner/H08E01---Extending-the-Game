@@ -6,7 +6,6 @@ public class IllegalMoveException extends Exception {
     public IllegalMoveException(String message) throws IllegalMoveException {
 
         this.message = message;
-        throw new IllegalMoveException(message);
 
     }
 

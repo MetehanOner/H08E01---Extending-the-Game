@@ -9,8 +9,8 @@ public abstract class Hero {
 
     protected Game game;
 
-    private Hunter Hunter;
-    private Mage Mage;
+    private Hunter hunter;
+    private Mage mage;
 
     protected Hero(Game game) {
         this.posX = 0;

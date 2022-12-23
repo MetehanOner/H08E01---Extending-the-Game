@@ -76,13 +76,15 @@ public class GameBoard {
 
     public void generateMonster() {
 
-        while (monsters.size() < maxMonsters) {
+        for (int i = 0; monsters.size() < maxMonsters; i++) {
 
             int mY = StudentRandom.randomInt(0,sizeY-1);
             int mX = StudentRandom.randomInt(0,sizeX-1);
 
             if( mY == EMPTY && mX == EMPTY) {
-                Monster m0 = new Monster(mX, mY);
+                Monster m = new Monster(mX, mY);
+                monsters.add(m);
+                boardMatrix[mX][mY] = MONSTER;
             }
 
         }

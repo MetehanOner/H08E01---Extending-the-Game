@@ -12,7 +12,10 @@ public abstract class Hero {
         this.posX = 0;
         this.posY = 0;
         this.game = game;
+    }
 
+    public Game getGame() {
+        return game;
     }
 
     public abstract void useSpecialPower(char option);

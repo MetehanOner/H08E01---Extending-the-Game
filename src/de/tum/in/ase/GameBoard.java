@@ -40,7 +40,7 @@ public class GameBoard {
 
         this.monsters = new ArrayList<>();
 
-        int temp = (this.sizeX * this.sizeY) / 3;
+        int temp = (this.sizeX * this.sizeY) / MIN_SIZE;
 
         this.boardMatrix[0][0] = HERO;
         this.boardMatrix[this.sizeX - 1][this.sizeY - 1] = GOAL;
@@ -76,10 +76,10 @@ public class GameBoard {
 
     public void generateMonster() {
 
-        for (int i = 0; monsters.size() < maxMonsters; i++) {
+        while (monsters.size() < maxMonsters) {
 
-            int mY = StudentRandom.randomInt(0,sizeY-1);
             int mX = StudentRandom.randomInt(0,sizeX-1);
+            int mY = StudentRandom.randomInt(0,sizeY-1);
 
             if( mY == EMPTY && mX == EMPTY) {
                 Monster m = new Monster(mX, mY);

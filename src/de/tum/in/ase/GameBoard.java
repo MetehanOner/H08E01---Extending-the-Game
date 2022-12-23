@@ -14,6 +14,8 @@ public class GameBoard {
     public static final char GOAL = 'G';
     public static final char EMPTY = '_';
 
+    public static final char MONSTER = 'M';
+
     private int sizeX;
     private int sizeY;
 
@@ -35,9 +37,12 @@ public class GameBoard {
             }
         }
 
+        int temp = (this.sizeX * this.sizeY) / 3;
+
         this.boardMatrix[0][0] = HERO;
         this.boardMatrix[this.sizeX - 1][this.sizeY - 1] = GOAL;
-        this.maxMonsters = (int) Math.floor(this.sizeX * this.sizeY);
+        this.maxMonsters = (int) Math.floor(temp);
+        generateMonster();
     }
 
     public char get(int x, int y) {
@@ -68,6 +73,29 @@ public class GameBoard {
 
     public void generateMonster() {
 
+        while (monsters.size() < maxMonsters) {
+
+            int mY = StudentRandom.randomInt(0,sizeY-1);
+            int mX = StudentRandom.randomInt(0,sizeX-1);
+
+            if( mY == EMPTY && mX == EMPTY) {
+                Monster m0 = new Monster(mX, mY);
+            }
+
+        }
+
+    }
+
+    public int getMaxMonsters() {
+        return maxMonsters;
+    }
+
+    public List<Monster> getMonsters() {
+        return monsters;
+    }
+
+    public void setMonsters(List<Monster> monsters) {
+        this.monsters = monsters;
     }
 
     public int getSizeX() {

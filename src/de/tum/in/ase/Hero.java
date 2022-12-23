@@ -15,6 +15,7 @@ public abstract class Hero {
     protected Hero(Game game) {
         this.posX = 0;
         this.posY = 0;
+        this.game = game;
     }
 
     public abstract void useSpecialPower(char option);

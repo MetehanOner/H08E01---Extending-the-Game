@@ -21,9 +21,10 @@ public class Game {
     private GameBoard gameBoard;
     private Hero hero;
 
-    public Game(int sizeX, int sizeY) {
+
+    public Game(int sizeX, int sizeY, HeroType type) {
         this.gameBoard = new GameBoard(sizeX, sizeY);
-        this.hero = new Hero();
+        //this.hero = new Hero();
     }
 
     public void moveLeft() {

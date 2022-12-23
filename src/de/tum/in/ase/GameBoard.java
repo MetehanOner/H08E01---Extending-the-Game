@@ -5,6 +5,8 @@ package de.tum.in.ase;
 // Also add a new method called "generateMonster" which will add a monster randomly on the map when the number of the
 // monsters is still lower than "maxMonsters".
 
+import java.util.List;
+
 public class GameBoard {
 
     private static final int MIN_SIZE = 3;
@@ -14,7 +16,11 @@ public class GameBoard {
 
     private int sizeX;
     private int sizeY;
+    private int maxMonsters;
     private char[][] boardMatrix;
+
+    private List<Monster> monsters;
+
 
     public GameBoard(int sizeX, int sizeY) {
         this.sizeX = Math.max(sizeX, MIN_SIZE);
@@ -56,6 +62,10 @@ public class GameBoard {
             builder.append("\n");
         }
         System.out.println(builder);
+    }
+
+    public void generateMonster(){
+
     }
 
     public int getSizeX() {

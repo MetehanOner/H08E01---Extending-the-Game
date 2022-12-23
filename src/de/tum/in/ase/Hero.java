@@ -6,7 +6,6 @@ public abstract class Hero {
 
     protected int posX;
     protected int posY;
-
     protected Game game;
 
     private Hunter hunter;

@@ -20,11 +20,12 @@ import static de.tum.in.ase.GameBoard.HERO;
 public class Game {
     private GameBoard gameBoard;
     private Hero hero;
-
+    private HeroType type;
 
     public Game(int sizeX, int sizeY, HeroType type) {
         this.gameBoard = new GameBoard(sizeX, sizeY);
-        //this.hero = new Hero();
+        this.type = type;
+
     }
 
     public void moveLeft() {

@@ -16,6 +16,7 @@ public class GameBoard {
 
     private int sizeX;
     private int sizeY;
+
     private int maxMonsters;
     private char[][] boardMatrix;
 
@@ -36,6 +37,7 @@ public class GameBoard {
 
         this.boardMatrix[0][0] = HERO;
         this.boardMatrix[this.sizeX - 1][this.sizeY - 1] = GOAL;
+        this.maxMonsters = (int) Math.floor(this.sizeX * this.sizeY);
     }
 
     public char get(int x, int y) {

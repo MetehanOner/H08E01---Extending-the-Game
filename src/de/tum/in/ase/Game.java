@@ -24,13 +24,10 @@ public class Game {
     public Game(int sizeX, int sizeY, HeroType type) {
         this.gameBoard = new GameBoard(sizeX, sizeY);
 
-        Hero mage = new Mage(this);
-        Hero hunter = new Hunter(this);
-
-        switch (type) {
-            case MAGE -> hero = mage;
-            case HUNTER -> hero = hunter;
-        }
+         this.hero = switch (type) {
+            case MAGE -> new Mage(this);
+            case HUNTER -> new Hunter(this);
+         };
 
     }
 

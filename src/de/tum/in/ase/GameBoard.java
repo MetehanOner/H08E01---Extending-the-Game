@@ -5,6 +5,7 @@ package de.tum.in.ase;
 // Also add a new method called "generateMonster" which will add a monster randomly on the map when the number of the
 // monsters is still lower than "maxMonsters".
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameBoard {
@@ -36,6 +37,8 @@ public class GameBoard {
                 this.getBoardMatrix()[j][i] = EMPTY;
             }
         }
+
+        this.monsters = new ArrayList<>();
 
         int temp = (this.sizeX * this.sizeY) / 3;
 

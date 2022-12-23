@@ -24,9 +24,12 @@ public class Game {
     public Game(int sizeX, int sizeY, HeroType type) {
         this.gameBoard = new GameBoard(sizeX, sizeY);
 
+        Hero mage = new Mage(this);
+        Hero hunter = new Hunter(this);
+
         switch (type) {
-            case MAGE -> hero = new Mage(this);
-            case HUNTER -> hero = new Hunter(this);
+            case MAGE -> hero = mage;
+            case HUNTER -> hero = hunter;
         }
 
     }

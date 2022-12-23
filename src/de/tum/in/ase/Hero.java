@@ -6,15 +6,13 @@ public abstract class Hero {
 
     protected int posX;
     protected int posY;
-    protected Game game;
-
-    private Hunter hunter;
-    private Mage mage;
+    public Game game;
 
     protected Hero(Game game) {
         this.posX = 0;
         this.posY = 0;
         this.game = game;
+
     }
 
     public abstract void useSpecialPower(char option);

@@ -64,7 +64,7 @@ public class GameBoard {
         System.out.println(builder);
     }
 
-    public void generateMonster(){
+    public void generateMonster() {
 
     }
 
